@@ -37,6 +37,12 @@ This is a smart cleaning robot that uses ultrasonic sensors to detect objects an
 4. The pump will be activated in wet cleaning mode to spray water
 5. The robot will continue cleaning until the user stops it
 
+
+## Diagram
+
+<img src="https://raw.githubusercontent.com/anvng/" alt="Figure 1. Model application development direction" 
+  style="height: 678px; width: 469px;"/> <br> Figure 1. Model application development direction
+
 ## Contributing
 
 This project is open source and welcomes contributions. To contribute, simply fork the repository and submit a pull request with your changes.
