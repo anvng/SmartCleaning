@@ -40,8 +40,8 @@ This is a smart cleaning robot that uses ultrasonic sensors to detect objects an
 
 ## Diagram
 
-<img src="https://raw.githubusercontent.com/anvng/" alt="Figure 1. Model application development direction" 
-  style="height: 678px; width: 469px;"/> <br> Figure 1. Model application development direction
+<img src="https://raw.githubusercontent.com/anvng/SmartCleaning/refs/heads/master/documents/img/diagram.png" alt="Figure 1. Model application development direction" 
+/> <br> Figure 1. Model application development direction
 
 ## Contributing
 
