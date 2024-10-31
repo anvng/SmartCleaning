@@ -33,7 +33,7 @@ This is a smart cleaning robot that uses ultrasonic sensors to detect objects an
 
 ## Installation
 
-Step 1. Install the Arduino IDE
+Step 1. Install the Arduino IDE </br>
 Step 2. Connect the hardware components according to the following steps:
    - Connect 4 HC-SR04 ultrasonic sensors to pins 2-5, 7-8, and A0-A1
    - Connect the L293D motor driver and motors to pins 6, 9, 10, and 11
@@ -42,11 +42,13 @@ Step 2. Connect the hardware components according to the following steps:
    - Connect the water level sensor to pin A3
    - Connect the dust sensor to pin A2
    - Power the system with a 12V battery
+
 Step 3. Install required libraries:
-   - NewPing
-   - LiquidCrystal_I2C
-   - Wire
-Step 4. Upload the code to the Arduino Nano
+- NewPing
+- LiquidCrystal_I2C
+- Wire
+</br>
+Step 4. Upload the code to the Arduino Nano </br>
 Step 5. Test the system by selecting a cleaning mode via serial monitor
 
 ## Usage
