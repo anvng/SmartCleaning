@@ -1,22 +1,31 @@
 # Smart Cleaning Robot
 
-This is a smart cleaning robot that uses ultrasonic sensors to detect objects and navigate around them. It also has a pump that can be used to spray water for wet cleaning. The robot is controlled by a user interface that allows the user to select between dry and wet cleaning modes.
+This is a smart cleaning robot that uses ultrasonic sensors to detect objects and navigate around them. It also has a pump that can be used to spray water for wet cleaning. The robot is controlled via the Arduino Serial Monitor interface that allows the user to select between dry and wet cleaning modes.
 
 ## Features
 
 * Dry and wet cleaning modes
-* Ultrasonic sensors for object detection
-* Pump for wet cleaning
-* User interface for selecting cleaning mode
+* Ultrasonic sensors for object detection and crack detection
+* Water pump system with level monitoring
+* LCD display interface for mode selection and status
+* Dust level monitoring
+* Intelligent obstacle avoidance navigation
+* Real-time sensor data display
 
 ## Hardware Requirements
 
-* Arduino board
-* Ultrasonic sensors
-* Pump
+* Arduino Nano
+* HC-SR04 Ultrasonic Sensor
+* 5v mini water pump
+* L293D_MOTOR_DRIVER
+* LCD screen 16x2 I2C
+* Battery 12v
 * Motor drivers
-* LCD display
-* Breadboard and jumper wires
+* Water Lever Sensor
+* Motor and Wheels
+* Dust Sensor
+* Jumper Wires
+
 
 ## Software Requirements
 
@@ -24,18 +33,41 @@ This is a smart cleaning robot that uses ultrasonic sensors to detect objects an
 
 ## Installation
 
-1. Install the Arduino IDE
-2. Connect the ultrasonic sensors, pump, motor drivers, and LCD display to the Arduino board
-3. Upload the code to the Arduino board
-4. Use the user interface to select the desired cleaning mode
+Step 1. Install the Arduino IDE
+Step 2. Connect the hardware components according to the following steps:
+   - Connect 4 HC-SR04 ultrasonic sensors to pins 2-5, 7-8, and A0-A1
+   - Connect the L293D motor driver and motors to pins 6, 9, 10, and 11
+   - Connect the 5V water pump to pin 13
+   - Connect the LCD screen via I2C (SDA/SCL pins)
+   - Connect the water level sensor to pin A3
+   - Connect the dust sensor to pin A2
+   - Power the system with a 12V battery
+Step 3. Install required libraries:
+   - NewPing
+   - LiquidCrystal_I2C
+   - Wire
+Step 4. Upload the code to the Arduino Nano
+Step 5. Test the system by selecting a cleaning mode via serial monitor
 
 ## Usage
 
-1. Select the desired cleaning mode using the user interface
-2. The robot will start cleaning the area using the selected mode
-3. The robot will detect objects using the ultrasonic sensors and navigate around them
-4. The pump will be activated in wet cleaning mode to spray water
-5. The robot will continue cleaning until the user stops it
+1. Power on the robot and wait for the "Choose Mode" message on the LCD
+2. Open the Arduino Serial Monitor (baud rate 9600)
+3. Send '1' for dry cleaning mode or '2' for wet cleaning mode
+4. The LCD will display the selected mode and the robot will begin cleaning
+5. In dry cleaning mode:
+   - Robot navigates using ultrasonic sensors to avoid obstacles
+   - Dust sensor monitors air quality
+   - LCD displays sensor readings and status
+6. In wet cleaning mode:
+   - All dry cleaning features plus water spraying
+   - Pump activates every 10 seconds if water level is sufficient
+   - LCD indicates "Spraying Water" or "Dry Cleaning" based on water level
+7. The robot will automatically:
+   - Stop and display warning if high dust levels detected
+   - Navigate around obstacles and edges
+   - Alert when cracks are detected in the floor
+8. To stop cleaning, reset or power off the robot
 
 
 ## Diagram
